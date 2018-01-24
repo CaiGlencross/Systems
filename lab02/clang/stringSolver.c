@@ -13,9 +13,16 @@
 #define MAX_INTS 6
 
 int main() {
-	char sentence[16];
-	sentence = 'Cecil Sagehen';
-	int* numbers = sentence;
-	printf('%d %d %d %d', numbers[0], numbers[1], numbers[2], numbers[3]);
+	char* sentence = "Cecil Sagehen";
+	int* numbers = NULL;
+	numbers = (int*) sentence;
+	printf("%d %d %d %d\n", numbers[0], numbers[1], numbers[2], numbers[3]);
+
+	double pi = 3.1415926535897931;
+	double* piptr = &pi;
+	int* numbersptr = (int*) piptr;
+	printf("%d %d\n", numbersptr[0], numbersptr[1]);
+
+
 
 }
