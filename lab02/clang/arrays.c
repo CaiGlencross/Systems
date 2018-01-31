@@ -2,7 +2,7 @@
  * arrays.c, a short list exercise using arrays for the 
  * C language lab in CS 105
  * 
- * <<Insert your names here!>>
+ * Cai Glencross & Jeff Carney
  *
  */
 #include <stdio.h>
@@ -63,13 +63,13 @@ int main () {
   two_dim_array tda;
   array_of_arrays aoa;
 
-  aoa[0] = 
-  aoa[1] = 
-  aoa[2] = 
-  aoa[3] = 
-  aoa[4] = 
-  aoa[5] = 
-  aoa[6] = 
+  aoa[0] = &(tda[0][0])+24;
+  aoa[1] = &(tda[0][0])+20;
+  aoa[2] = &(tda[0][0])+16;
+  aoa[3] = &(tda[0][0])+12;
+  aoa[4] = &(tda[0][0])+8;
+  aoa[5] = &(tda[0][0])+4;
+  aoa[6] = &(tda[0][0]);
 
   init_two_dim_array(tda);
   print_two_dim_array(tda);

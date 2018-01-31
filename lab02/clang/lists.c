@@ -20,7 +20,13 @@ typedef struct cell {
  *    frees all the elements in a list and makes the list empty
  */
 void makeempty(cell_t** thelist) {
-
+  cell_t* current = thelist[0];
+  while(current->next != NULL){
+    cell_t* temp = current->next;
+    free(current);
+    current=temp;
+  }
+  *thelist = NULL;
 }
 
 /* prepend
@@ -28,7 +34,10 @@ void makeempty(cell_t** thelist) {
  *    and adds it to the front of the list
  */
 void prepend(int newvalue, cell_t** thelist) {
-
+  cell_t *p = (cell_t *) malloc(sizeof(cell_t));
+  p->value = newvalue;
+  p->next = *thelist;
+  *thelist = p;
 }
 
 /* append
@@ -57,6 +66,17 @@ void append(int newvalue, cell_t** thelist) {
  *    are in the opposite order
  */
 void reverse(cell_t** thelist) {
+  cell_t *current_elt = *thelist;
+  cell_t *prev_elt    = NULL;
+
+  while(current_elt->next != NULL){
+    cell_t *next_elt = current_elt->next;
+    current_elt->next = prev_elt;
+    prev_elt = current_elt;
+    current_elt = next_elt;
+  }
+  current_elt->next = prev_elt;
+  *thelist = current_elt;
 
 }
 
