@@ -15,7 +15,7 @@ PROBLEM 1:
 
 5.	The program prints -1835
 
-6.	argc = 2 , 
+6.	argc = 2 ,
 	argv = {<Some Address> "Users/jcarney/Documents/Systems/lab03/problem1", <Some Address> "5"}
 	The first argument is the path to the executable, from the run command, the second thing is 5 because 5 was stored in memory from the previous run command.
 
@@ -50,4 +50,4 @@ PROBLEM 2:
 
 2.	This prints the hexadecimal that is in the code, which is much more edifying!!!
 
-3. 	
+3. 	It prints the individual bytes of p/x puzzle1.
