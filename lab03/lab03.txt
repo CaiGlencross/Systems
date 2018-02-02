@@ -1,0 +1,34 @@
+Authors: Cai Glencross and Jeff Carney
+Class: CS105 - Systems
+Professor: Everett Bull
+Date: Jan 30, 2018
+
+1.	When we type continue, we get a Segmentation Fault.
+
+2.	We are on line number 17 in main in problem1.c
+
+3.	You can not see the stackframe for the atoi call :(
+
+4.	argv[1] = 0x0
+
+5.	The program prints -1835
+
+6.	argc = 2 , 
+	argv = {<Some Address> "Users/jcarney/Documents/Systems/lab03/problem1", <Some Address> "5"}
+	The first argument is the path to the executable, from the run command, the second thing is 5 because 5 was stored in memory from the previous run command.
+
+7.	We end up in the function loop_while from line 5 in problem1.c
+
+8.	We see the fist ten lines of problem1.c (up to the closing brace of the while loop in loop_while)
+	after hitting enter we see the rest of the problem1.c file (the next ten lines)
+
+9.	Shows you the next few lines after what you stepped to
+
+10.	result = 5, a = 5, b = 16
+
+11. The first four lines of the loop_while function are shown, they are in this order because of the optimizer making the code more efficient.
+
+12. the address of the instruction that calls atoi is 0x00000000004004ba
+	the address of the instruction that calls printf is 0x00000000004004e7
+
+13.	there is no call to loop while, the compiler figures out how to optimize what you did, starting with an lea call at address 0x4004bf, right underneath the call to atoi.
