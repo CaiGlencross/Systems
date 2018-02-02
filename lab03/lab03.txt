@@ -3,6 +3,8 @@ Class: CS105 - Systems
 Professor: Everett Bull
 Date: Jan 30, 2018
 
+PROBLEM 1:
+
 1.	When we type continue, we get a Segmentation Fault.
 
 2.	We are on line number 17 in main in problem1.c
@@ -28,7 +30,24 @@ Date: Jan 30, 2018
 
 11. The first four lines of the loop_while function are shown, they are in this order because of the optimizer making the code more efficient.
 
-12. the address of the instruction that calls atoi is 0x00000000004004ba
-	the address of the instruction that calls printf is 0x00000000004004e7
+12. The address of the instruction that calls atoi is 0x00000000004004ba
+	The address of the instruction that calls printf is 0x00000000004004e7
 
-13.	there is no call to loop while, the compiler figures out how to optimize what you did, starting with an lea call at address 0x4004bf, right underneath the call to atoi.
+13.	There is no call to loop while, the compiler figures out how to optimize what you did, starting with an lea call at address 0x4004bf, right underneath the call to atoi.
+
+14.	It prints 0x2a which is hexadecimal 42, it prints out 47 which is the decimal representation of that hex number
+
+15. The constant 16 comes from the argument b, the compiler has optimized to a constant because it never changes and that is faster than accessing memory.
+
+16.	Optimized out! not a necessary call.
+
+17.	Wow is right.
+
+
+PROBLEM 2:
+
+1. 	It prints 1078530011, which is the decimal version of the hex value.
+
+2.	This prints the hexadecimal that is in the code, which is much more edifying!!!
+
+3. 	
